@@ -6,7 +6,7 @@ class Timer extends React.Component {
     this.state = { time: 0, x: 0, y: 0,started: false };
   }
 
-  keyListener=(evt)=>{
+  keyListener = (evt) => {
     if(this.state.started){
       if(evt.keyCode===37){
         this.setState({x: this.state.x-5});
@@ -48,7 +48,7 @@ class Timer extends React.Component {
           <button className="start" onClick={this.gameStart}></button>
         ):(
           <>
-          <div className="ball1"></div>
+          <div className="ball"></div>
           <div className="hole"></div>
           <div className="heading-timer">{this.state.time}</div>
           </>
